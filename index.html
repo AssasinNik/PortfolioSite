@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita Cherenkov - Android Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="logo.svg" alt="Logo" />
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About Me</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="burger-menu" id="burgerMenu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="about">
+            <div class="container hero-content">
+                <h1 class="fade-in">Hi, I'm <span class="highlight">Nikita Cherenkov</span></h1>
+                <p class="job-title slide-up">Android Developer</p>
+                <div class="social-links slide-up">
+                    <a href="mailto:nikitacherenkov1810@gmail.com"><img src="email-icon.svg" alt="Email"></a>
+                    <a href="https://github.com/AssasinNik"><img src="github-icon.svg" alt="GitHub"></a>
+                </div>
+            </div>
+            <div class="hero-image" id="heroImage">
+                <img src="person.svg" alt="Nikita Cherenkov" class="profile-picture" />
+            </div>
+            <div class="scroll-down fade-in" id="scrollDown">Scroll Down</div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/android.svg" alt="Android SDK"
+                        class="skill-icon">
+                    <p>Android SDK</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/kotlin.svg" alt="Kotlin"
+                        class="skill-icon">
+                    <p>Kotlin</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/gradle.svg" alt="Gradle"
+                        class="skill-icon">
+                    <p>Gradle</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/firebase.svg" alt="Firebase"
+                        class="skill-icon">
+                    <p>Firebase</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/jetpackcompose.svg"
+                        alt="Jetpack Compose" class="skill-icon">
+                    <p>Jetpack Compose</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <a class="portfolio-item">
+                    <img src="project2.svg" alt="FilmApp" class="project-image" />
+                    <p>FilmApp - Movies for your mood</p>
+                </a>
+                <a class="portfolio-item">
+                    <img src="project2.svg" alt="MarvelLibrary" class="project-image" />
+                    <p>MarvelLibrary - Actual Information about Marvels</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="footer">
+        <div class="social-footer">
+            <a href="https://github.com/AssasinNik">GitHub</a>
+            <a href="https://www.instagram.com/n_cher1">Instagram</a>
+            <a href="mailto:nikitacherenkov1810@gmail.com">Email</a>
+        </div>
+        <p>©2024 Nikita Cherenkov. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
