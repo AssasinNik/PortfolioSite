@@ -236,7 +236,7 @@ nav {
     width: max-content;
 }
 
-@media (min-width: 768px) {
+@media (hover: hover) {
     .skill:hover img {
         transform: scale(1.3) rotate(10deg);
     }
@@ -266,6 +266,7 @@ nav {
 .portfolio-item {
     position: relative;
     overflow: hidden;
+    text-decoration: none;
 }
 
 .project-image {
@@ -275,7 +276,7 @@ nav {
     transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (min-width: 768px) {
     .portfolio-item:hover .project-image {
         transform: scale(1.2);
         filter: brightness(0.7);
@@ -302,7 +303,7 @@ nav {
     color: black;
     position: relative;
     text-align: center;
-    
+
     @media (min-width: 768px) {
         position: absolute;
         top: 50%;
