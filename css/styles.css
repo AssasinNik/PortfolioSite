@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
@@ -53,7 +52,13 @@ nav {
     gap: 20px;
     list-style: none;
 }
+.social-links a img {
+    transition: transform 0.3s ease;
+}
 
+.social-links a:hover img {
+    transform: scale(1.1);
+}
 .nav-links li a {
     font-weight: 700;
     font-size: 1.2em;
@@ -263,64 +268,6 @@ nav {
     gap: 40px;
 }
 
-.portfolio-item {
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
-}
-
-.project-image {
-    width: 100%;
-    height: 400px;
-    object-fit: contain;
-    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
-}
-
-@media (hover: hover) and (min-width: 768px) {
-    .portfolio-item:hover .project-image {
-        transform: scale(1.2);
-        filter: brightness(0.7);
-    }
-
-    .portfolio-item:hover::before {
-        opacity: 1;
-    }
-}
-
-
-.portfolio-item::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.portfolio-item p {
-    color: black;
-    position: relative;
-    text-align: center;
-
-    @media (min-width: 768px) {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        opacity: 0;
-    }
-
-    font-size: 1.5em;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.portfolio-item:hover p {
-    opacity: 1;
-}
-
 /* Footer */
 footer {
     background-color: #f5f5f5;
@@ -367,6 +314,119 @@ footer {
         transform: translateY(0);
     }
 }
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Увеличиваем минимальную ширину колонок */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    max-width: 1200px; /* Увеличиваем максимальную ширину сетки */
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0px 10px 20px rgba(66, 81, 99, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    text-align: left;
+    max-width: 700px; /* Увеличиваем максимальную ширину карточки */
+    width: 100%;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #666;
+    text-align: left;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1200px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Уменьшаем ширину колонок на более узких экранах */
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 15px;
+        max-width: 100%; /* Карточки занимают больше места на меньших экранах */
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Одна колонка на маленьких экранах */
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .card {
+        padding: 10px;
+        max-width: 100%; /* Карточки занимают всю ширину экрана */
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid {
+        padding: 5px;
+        gap: 5px;
+    }
+
+    .card {
+        padding: 5px;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {
